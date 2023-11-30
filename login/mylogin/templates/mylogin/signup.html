@@ -1,0 +1,54 @@
+{% extends "mylogin/base.html" %}
+{% load static %}
+{% block title %}Singup{% endblock title %}
+{% block content %}
+<section class="main-singup-page">
+    <div>
+        <h1 class="signup-head">SingUp</h1>
+    </div>
+    <div>
+        <form action="" method="post" class="form-div">
+            {% csrf_token %}
+            <div>
+                <label for="">Username</label>
+                <input type="text" name="username">
+            </div>
+            <div>
+                <label for="">Frist Name</label>
+                <input type="text" name="fname">
+            </div>
+            <div>
+                <label for="">Last Name</label>
+                <input type="text" name="lname">
+            </div>
+            <div>
+                <label for="">Email</label>
+                <input type="email" name="email">
+            </div>
+            <div>
+                <label for="">Password</label>
+                <input type="password" name="pass1">
+            </div>
+            <div>
+                <label for="">Confirm Password</label>
+                <input type="password" name="pass2">
+            </div>
+            <div class="buttons-divs">
+                <button type="submit">signup</button>
+            </div>
+
+            {% if messages %}
+            <div class="msg-sec">
+                {% for msg in messages %}
+                <h3>{{msg}}</h3>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+
+        </form>
+
+    </div>
+</section>
+
+{% endblock content %}

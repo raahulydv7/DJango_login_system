@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+header,nav{
+    height: 60px;
+    width: 100vw;
+    box-shadow: 0 0 5px grey;
+}
+ul{
+    height: 60px;
+    width: 100vw;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+    
+ul>li>a{
+    color: black;
+    font-weight: 700;
+    font-size: 1vw;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* footer */
+footer{
+    height: 20%;
+    width: 100vw;
+    color: #F0ECE5;
+    text-align: center;
+    background-color: rgb(29, 26, 26);
+}
+/* home-section */
+
+.home-section{
+    height: calc(80% - 60px);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.buttons-divs{
+    margin-top: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.buttons-divs>button{
+    height: 2.3vw;
+    width: 5vw;
+    border-radius: 0.5vw;
+    background-color: #31304D;
+}
+.buttons-divs>button,.buttons-divs>button>a{
+    font-size: 1vw;
+    text-decoration: none;
+    color: #F0ECE5;
+}
+
+/* signup-head */
+
+.signup-head{
+    color: red;
+    text-align: center;
+    margin-bottom: 2vw;
+}
+.main-singup-page{
+    height: 50vmin;
+    width: 30vw;
+    box-shadow: 2px 2px 15px red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form-div>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.form-div>div>input{
+    width: 20vw;
+    height: 2.5vw;
+}
+
+/* img-sec */
+.img-sec{
+    height: 20vw;
+    width: 80vw;
+    text-align: center;
+}
+.msg-sec{
+    height: 5vw;
+    width: 10vw;
+}
+.msg-sec>h3{
+    color: rgb(0, 255, 0);
+}

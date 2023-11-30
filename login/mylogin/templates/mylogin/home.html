@@ -1,0 +1,26 @@
+{% extends "mylogin/base.html" %}
+{% load static %}
+{% block title %}HOME{% endblock title %}
+{% block content %}
+<section >
+    <div>
+    <h1>
+        Welcome to GFG login system
+    </h1>
+    {% if request.user.is_authenticated %}
+    <h1>Hello, {{request.user}} </h1>
+    {% endif %}
+</div>
+<div class="buttons-divs">
+    <button type="submit">
+        <a href="{% url 'signup' %}">signup</a>
+    </button>
+    <button type="submit">
+        <a href="{% url 'signin' %}">signin</a>
+    </button>
+    <button type="submit">
+        <a href="{% url 'signout' %}">signout</a>
+    </button>
+</div>
+</section>
+{% endblock content %}

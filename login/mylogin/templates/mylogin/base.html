@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document | {% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'mylogin/mylogin.css' %}">
+</head>
+<body>
+    
+
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">HOME</a></li>
+                <li><a href="{% url 'signup' %}">signup</a></li>
+                <li><a href="{% url 'signin' %}">signin</a></li>
+                <li><a href="">signout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="home-section">
+        {% block content %}{% endblock content %}
+    </section>
+    <footer>
+        <h3>This is footer area</h3>
+    </footer>
+</body>
+</html>
